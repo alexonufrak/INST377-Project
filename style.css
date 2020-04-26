@@ -5,5 +5,20 @@
 }
 
 .fa{
-    color:#6ee633;
+    color:#ff3712;
+}
+.custom{
+	background-color: #d3d3d3;
+	border-radius:10px;
+	box-shadow: 1px 3px 4px #cccccc;
+}
+a:hover{
+	color:#ff3712;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+a{
+	color:white;
 }
