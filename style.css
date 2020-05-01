@@ -5,20 +5,25 @@
 }
 
 .fa{
-    color:#ff3712;
+    color:#6ee633;
 }
-.custom{
-	background-color: #d3d3d3;
-	border-radius:10px;
-	box-shadow: 1px 3px 4px #cccccc;
+.custom {
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    box-shadow: 1px 3px 4px #cccccc;
 }
 a:hover{
-	color:#ff3712;
+    columns: #ff3712;
 }
 body{
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 a{
-	color:white;
+    color: white;
+}
+h3, h2, h4, h5, h6{
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
 }
