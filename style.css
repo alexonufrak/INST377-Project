@@ -1,0 +1,31 @@
+body{
+	padding: 0;
+    margin: 0;
+}	
+
+.navigation{
+
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+a{
+	background: #eee;
+	padding:10px;
+	margin-left:10px;
+	color:black;
+}
+
+.fa{
+    color:#ff3;
+}
+h3, h2, h4, h5, h6{
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.bg-custom{
+	background: #ccc;
+}
