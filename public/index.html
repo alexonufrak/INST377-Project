@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PG County Firestations</title>
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/7.14.2/firebase-auth.js"></script>
+<script defer src="/__/firebase/7.14.2/firebase-firestore.js"></script>
+<script defer src="/__/firebase/7.14.2/firebase-messaging.js"></script>
+<script defer src="/__/firebase/7.14.2/firebase-storage.js"></script>
+<!-- initialize the SDK after all desired features are loaded -->
+<script defer src="/__/firebase/init.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+crossorigin=""></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container p-3">
+      <div class="navigation d-flex justify-content-end">
+        <div class="menu d-flex justify-content-end">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="document.html" class="nav-link">Document</a>
+        </div>
+      </div>
+
+      </script>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="mapid"></div>
+          <script>
+            const mymap = L.map('mapid').setView([38.8447892, -76.8266697], 9);
+
+            const attribution = 
+            '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+
+            const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            const tiles = L.tileLayer(tileUrl, { attribution })
+            tiles.addTo(mymap)
+
+            const url = 'https://data.princegeorgescountymd.gov/resource/bzf2-94qx.json';
+            async function getData() {
+              const response = await fetch(url)
+              const data = await response.json();
+              
+              for (item of data) {
+                var lat = item.location_1.latitude;
+                var lng = item.location_1.longitude;
+                var addy = item.human_address;
+                
+                const marker = L.marker([lat, lng], title=item.station_name).addTo(mymap);
+
+                const txt = `${item.station_name}`;
+                marker.bindPopup(txt);
+              }
+
+            }
+            $("#all").click(function() {
+            map.addLayer(others)
+            map.removeLayer(cafes)
+        });
+        $("#ambulance").click(function() {
+            map.addLayer(cafes)
+            map.removeLayer(others)
+        });
+        $("#medicalunit").click(function() {
+            map.addLayer(cafes)
+            map.addLayer(others)
+        });
+
+            getData();
+          </script>
+        </div>
+        <div class="col-md-6">
+          <div class="btn-group">
+            <button type="button" id="all" class="btn btn-success">All</button>
+            <button type="button" id="ambulance" class="btn btn-primary">Ambulance</button>
+            <button type="button" id="medicalunit" class="btn btn-danger">Medical Unit</button>
+        </div>
+        </div>
+        <div class="col-md-6 bg-light mt-5">
+          <div class="row">
+            <div class="col-md-7">
+              <h3>Selected Station Services Rating</h3>
+                <!-- Might not need this block
+                 <p> <b>Type: State</b></p>
+                 <p> <b>Medical unit: Yes</b></p>
+                  <p><b>Ambulance: Yes</b></p>
+                  -->
+            </div>
+            <div class="col-md-5 pt-5">
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+
+          </div>
+            
+          </div>
+        </div>
+        </div>
+      </div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
