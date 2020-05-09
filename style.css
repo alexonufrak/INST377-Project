@@ -1,29 +1,31 @@
+body{
+	padding: 0;
+    margin: 0;
+}	
+
 .navigation{
 
     display:flex;
     justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+a{
+	background: #eee;
+	padding:10px;
+	margin-left:10px;
+	color:black;
 }
 
 .fa{
-    color:#6ee633;
-}
-.custom {
-    background-color: #d3d3d3;
-    border-radius: 10px;
-    box-shadow: 1px 3px 4px #cccccc;
-}
-a:hover{
-    columns: #ff3712;
-}
-body{
-    padding: 0;
-    margin: 0;
-}
-a{
-    color: white;
+    color:#ff3;
 }
 h3, h2, h4, h5, h6{
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: bold;
+}
+
+.bg-custom{
+	background: #ccc;
 }
