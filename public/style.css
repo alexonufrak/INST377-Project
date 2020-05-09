@@ -20,10 +20,15 @@ body{
     margin: 0;
 }
 a{
-    color: white;
+    color: rgb(26, 26, 26);
 }
 h3, h2, h4, h5, h6{
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: bold;
+}
+#mapid {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
 }
