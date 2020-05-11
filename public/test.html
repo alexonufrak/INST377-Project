@@ -36,11 +36,43 @@ crossorigin=""></script>
       
       <div class="row">
         <div class="col-md-12">
-          <div>
+          <div class = "content">
             <div id="mapid"></div>
 
           </div>
           
+        </div>
+        <div class="col-md-6">
+          <div class="btn-group">
+            <button type="button" id="all" class="btn btn-success">All</button>
+            <button type="button" id="ambulance" class="btn btn-primary">Ambulance</button>
+            <button type="button" id="medicalunit" class="btn btn-danger">Medical Unit</button>
+        </div>
+        </div>
+        <div class="col-md-6 bg-light mt-5">
+          <div class="row">
+            <div class="col-md-7">
+              <h3>Selected Station Services Rating</h3>
+                <!-- Might not need this block
+                 <p> <b>Type: State</b></p>
+                 <p> <b>Medical unit: Yes</b></p>
+                  <p><b>Ambulance: Yes</b></p>
+                  -->
+            </div>
+            <div class="col-md-5 pt-5">
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star" aria-hidden="true"></i>
+             <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+          </div>
+            
+          </div>
+        </div>
+        </div>
+        
+      
           <script>
             const mymap = L.map('mapid').setView([38.8447892, -76.8266697], 9);
 
@@ -73,71 +105,46 @@ crossorigin=""></script>
                   if(!ambulance == 'Y'){
                     map.removeLayer(marker)
                   }
+                    //map.addLayer(cafes)
+                    //map.removeLayer(others)
+                });
 
-                $("#ambulance").click(function() {
-                  if(!ambulance == 'Y'){
+                $("#medicalunit").click(function() {
+                  if(!medicalOnsite  == 'Y'){
                     map.removeLayer(marker)
+
                   }
+                    //map.addLayer(cafes)
+                    //map.addLayer(others)
+                });
 
                 
-              }
-              
 
             }
             $("#all").click(function() {
             map.addLayer(others)
             map.removeLayer(cafes)
-        });
-        $("#ambulance").click(function() {
-          if(!ambulance == 'Y'){
-            map.removeLayer(marker)
-          }
-            //map.addLayer(cafes)
-            //map.removeLayer(others)
-        });
-        $("#medicalunit").click(function() {
-          if(!medicalOnsite  == 'Y'){
-            map.removeLayer(marker)
+              });
+              $("#ambulance").click(function() {
+                if(!ambulance == 'Y'){
+                  map.removeLayer(marker)
+                }
+                  //map.addLayer(cafes)
+                  //map.removeLayer(others)
+              });
+              $("#medicalunit").click(function() {
+                if(!medicalOnsite  == 'Y'){
+                  map.removeLayer(marker)
 
-          }
-            //map.addLayer(cafes)
-            //map.addLayer(others)
-        });
+                }
+                  //map.addLayer(cafes)
+                  //map.addLayer(others)
+              });
+            }
 
             getData();
-          </script>
-        </div>
-        <div class="col-md-6">
-          <div class="btn-group">
-            <button type="button" id="all" class="btn btn-success">All</button>
-            <button type="button" id="ambulance" class="btn btn-primary">Ambulance</button>
-            <button type="button" id="medicalunit" class="btn btn-danger">Medical Unit</button>
-        </div>
-        </div>
-        <div class="col-md-6 bg-light mt-5">
-          <div class="row">
-            <div class="col-md-7">
-              <h3>Selected Station Services Rating</h3>
-                <!-- Might not need this block
-                 <p> <b>Type: State</b></p>
-                 <p> <b>Medical unit: Yes</b></p>
-                  <p><b>Ambulance: Yes</b></p>
-                  -->
-            </div>
-            <div class="col-md-5 pt-5">
-             <i class="fa fa-star" aria-hidden="true"></i>
-             <i class="fa fa-star" aria-hidden="true"></i>
-             <i class="fa fa-star" aria-hidden="true"></i>
-             <i class="fa fa-star" aria-hidden="true"></i>
-             <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            </div>
+           </script>
+        
 
-          </div>
-            
-          </div>
-        </div>
-        </div>
-      </div>
-<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
