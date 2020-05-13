@@ -11,4 +11,3 @@ To use this system you need go on the home page, which is the intial page contai
 
 ## Rating System
 Each station has a rating out of five stars to help point out which station has more services available. The five star rating is determined by gaining one star if the station has an ambulance, one star if there is a medical unit and up to three stars based on the type of station. One star for volunteer, two stars for county and three stars for state run fire stations.
-
