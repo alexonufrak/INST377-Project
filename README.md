@@ -8,8 +8,12 @@ The browsers that were targeted was both mobile and computer platforms. Both And
 
 ## Table of Contents
 
+ - [Team](#team)
+ - [FAQ](#faq)
  - [Final Report](docs/final.md)
- - Developer Manual
- - [User Manual](docs/user.md)
+ -  Developer Manual
+ - [User Manual](docs/user.md) 
 
-# Developer Manual
+## Team
+
+## FAQ
