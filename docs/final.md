@@ -14,7 +14,7 @@ We chose the fire department as the emergency service to focus on, since fire st
 The stakeholders for this project were people looking to purchase a house in PG county, as well as current residence. For those looking to purchase houses this application can help determine which fire station is better than the others and look at proximity of houses to those stations.
 
 ## Target Browsers
-The browsers that were targeted was both mobile and computer platforms. Both Android and iOS, as well as PC and Macs can run the application.
+The browsers that were targeted was both mobile and computer platforms. Both Android 10 and iOS 13, as well as PC and Macs can run the application.
 
 ## Data
 We aquired the locations and information about all the fire stations in PG County from PG County's open data website.
