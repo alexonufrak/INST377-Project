@@ -4,7 +4,7 @@ Fetches and displays updated location data of Fire Stations in Prince Georges Co
 **[Click here to visit instance where application is used](https://firestation-377.web.app/)**
 
 ## Table of Contents
- - [Developer Manual](#developer_manual)l
+ - [Developer Manual](#developer_manual)
  - [User Manual](docs/user.md) 
 
 ## Developer Manual 
