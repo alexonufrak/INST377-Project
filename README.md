@@ -1,10 +1,9 @@
 # Fire Station Locator 
-Fetches and displays updated location data of Fire Stations in Prince Georges County, MD.
+Fetches and displays updated location data of Fire Stations in Prince Georges County, MD. 
+allows users to filter specific locations based on the button they clicked on.
+our main target are computer users, but it works with Ios 13 and android 10 
 
-## Target Browsers
-The browsers that were targeted was both mobile and computer platforms. Both Android and iOS, as well as PC and Macs can run the application.
-
-**[Click here to visit instance where application is run](https://firestation-377.web.app/)**
+**[Click here to visit a live demo](https://firestation-377.web.app/)**
 
 ## Table of Contents
 
@@ -17,3 +16,6 @@ The browsers that were targeted was both mobile and computer platforms. Both And
 ## Team
 
 ## FAQ
+
+
+## Developer Manual 
