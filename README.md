@@ -8,3 +8,6 @@ Fetches and displays updated location data of Fire Stations in Prince Georges Co
  - [User Manual](docs/user.md) 
 
 ## Developer Manual 
+we used the GET endpoint to fetch information from the api call, we then used it get the latitude, longitude, address and whether or not a place had a medical onsite or ambulance onsite. we also used another GET to get the information that we can use to display the map, we did this by using an API access token we got from mapbox
+
+we had problems implementing a search bar to our map and we will work on how to implement that during our future development 
