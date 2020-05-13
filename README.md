@@ -5,6 +5,12 @@ Fetches and displays updated location data of Fire Stations in Prince Georges Co
 
 ## Table of Contents
 
+ - [Team](#team)
+ - [FAQ](#faq)
  - [Final Report](docs/final.md)
- - Developer Manual
- - [User Manual](docs/user.md)
+ -  Developer Manual
+ - [User Manual](docs/user.md) 
+
+## Team
+
+## FAQ
